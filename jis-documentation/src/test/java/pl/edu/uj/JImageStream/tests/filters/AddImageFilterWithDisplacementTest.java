@@ -13,11 +13,11 @@ public class AddImageFilterWithDisplacementTest extends AbstractBaseTest {
     @Test
     public void addImageFilterWithDisplacement() {
 
-        BufferedImage addBufferedImage = streamableImage2.stream().collect(new BufferedImageCollector());
+        BufferedImage carBufferedImage = streamableImage2.stream().collect(new BufferedImageCollector());
 
         // tag::AddImageFilterWithDisplacement[]
         BufferedImage bufferedImage = streamableImage.stream()
-                .apply(new AddImageFilter(addBufferedImage, 200, 200))
+                .apply(new AddImageFilter(carBufferedImage, 200, 200))
                 .collect(new BufferedImageCollector());
         // end::AddImageFilterWithDisplacement[]
 

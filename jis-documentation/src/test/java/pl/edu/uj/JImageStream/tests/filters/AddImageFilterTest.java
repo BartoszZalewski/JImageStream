@@ -13,11 +13,11 @@ public class AddImageFilterTest extends AbstractBaseTest {
     @Test
     public void addImageFilterTest() {
 
-        BufferedImage addBufferedImage = streamableImage2.stream().collect(new BufferedImageCollector());
+        BufferedImage carBufferedImage = streamableImage2.stream().collect(new BufferedImageCollector());
 
         // tag::AddImageFilter[]
         BufferedImage bufferedImage = streamableImage.stream()
-                .apply(new AddImageFilter(addBufferedImage))
+                .apply(new AddImageFilter(carBufferedImage))
                 .collect(new BufferedImageCollector());
         // end::AddImageFilter[]
 

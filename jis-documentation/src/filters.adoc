@@ -19,6 +19,7 @@ include::{sourcedir}/filters/SaltAndPepperFilterTest.java[tags=saltAndPepperFilt
 --
 image::lena.png[title="original", width="300", height="300"]
 --
+image::car.png[title="car", width="300", height="300]
 
 === Blurring filters
 ==== Box blur filter
@@ -138,6 +139,27 @@ image::InvertFilter.png[title="Invert Filter", width="300", height="300"]
 include::{sourcedir}/filters/SaltAndPepperFilterTest.java[tags=saltAndPepperFilter]
 ----
 image::SaltAndPepperFilter.png[title="Salt and pepper Filter", width="300", height="300"]
+
+
+=== Arithmetic filters
+
+==== AddImage filter
+
+[source,java]
+.code
+----
+include::{sourcedir}/filters/AddImageFilterTest.java[tags=AddImageFilter]
+----
+image::AddImageFilter.png[title="Add Image Filter", width="300", height="300"]
+
+==== AddImage filter with displacement
+
+[source,java]
+.code
+----
+include::{sourcedir}/filters/AddImageFilterWithDisplacementTest.java[tags=AddImageFilterWithDisplacement]
+----
+image::AddImageFilterWithDisplacement.png[title="Add Image With Displacement Filter", width="300", height="300"]
 
 
 === Statistical filters
