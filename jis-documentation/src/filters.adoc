@@ -161,6 +161,24 @@ include::{sourcedir}/filters/AddImageFilterWithDisplacementTest.java[tags=AddIma
 ----
 image::AddImageFilterWithDisplacement.png[title="Add Image With Displacement Filter", width="300", height="300"]
 
+==== SubImage filter
+
+[source,java]
+.code
+----
+include::{sourcedir}/filters/SubImageFilterTest.java[tags=SubImageFilter]
+----
+image::SubImageFilter.png[title="Sub Image Filter", width="300", height="300"]
+
+==== SubImage filter with displacement
+
+[source,java]
+.code
+----
+include::{sourcedir}/filters/SubImageFilterWithDisplacementTest.java[tags=SubImageFilterWithDisplacement]
+----
+image::SubImageFilterWithDisplacement.png[title="Sub Image With Displacement Filter", width="300", height="300"]
+
 
 === Statistical filters
 
