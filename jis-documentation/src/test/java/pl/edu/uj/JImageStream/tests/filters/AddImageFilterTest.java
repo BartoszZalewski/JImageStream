@@ -13,12 +13,7 @@ public class AddImageFilterTest extends AbstractBaseTest {
     @Test
     public void addImageFilterTest() {
 
-        BufferedImage addBufferedImage = null;
-        try {
-            addBufferedImage = ImageIO.read(new File("target/docs/images/lena.png"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        BufferedImage addBufferedImage = streamableImage2.stream().collect(new BufferedImageCollector());
 
         // tag::AddImageFilter[]
         BufferedImage bufferedImage = streamableImage.stream()
