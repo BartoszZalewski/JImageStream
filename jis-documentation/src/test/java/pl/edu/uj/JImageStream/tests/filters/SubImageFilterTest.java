@@ -6,27 +6,25 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import org.junit.Test;
 import pl.edu.uj.JImageStream.collectors.BufferedImageCollector;
-import pl.edu.uj.JImageStream.filters.arithmetic.AddImageFilter;
+import pl.edu.uj.JImageStream.filters.arithmetic.SubImageFilter;
 import pl.edu.uj.JImageStream.tests.AbstractBaseTest;
 
-public class AddImageFilterWithDisplacementTest extends AbstractBaseTest {
+public class SubImageFilterTest extends AbstractBaseTest {
     @Test
-    public void addImageFilterWithDisplacement() {
+    public void subImageFilterTest() {
 
         BufferedImage carBufferedImage = streamableImage2.stream().collect(new BufferedImageCollector());
 
-        // tag::AddImageFilterWithDisplacement[]
+        // tag::SubImageFilter[]
         BufferedImage bufferedImage = streamableImage.stream()
-                .apply(new AddImageFilter(carBufferedImage, 200, 200))
+                .apply(new SubImageFilter(carBufferedImage))
                 .collect(new BufferedImageCollector());
-        // end::AddImageFilterWithDisplacement[]
+        // end::SubImageFilter[]
 
         try {
-            ImageIO.write(bufferedImage, "png", new File("target/docs/images/AddImageFilterWithDisplacement.png"));
+            ImageIO.write(bufferedImage, "png", new File("target/docs/images/SubImageFilter.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 }
-
-
