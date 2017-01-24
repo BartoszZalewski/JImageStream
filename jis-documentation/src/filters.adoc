@@ -18,7 +18,6 @@ include::{sourcedir}/filters/SaltAndPepperFilterTest.java[tags=saltAndPepperFilt
 
 --
 image::lena.png[title="original", width="300", height="300"]
---
 image::car.png[title="car", width="300", height="300]
 --
 
